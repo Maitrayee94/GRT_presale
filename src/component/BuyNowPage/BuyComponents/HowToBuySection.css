@@ -1,0 +1,365 @@
+.HowToBuySection_container{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    width: 100%;
+}
+
+
+.HowToBuySection_container h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+.HowToBuySection_container p{
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+
+.BuyStep_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.BuyStep_container .step1_container{
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    
+}
+
+.step1_info_container{
+    width: 40%;
+}
+
+.step1_container .step1_info p{
+    width:100%;
+    text-align: start;
+    font-size:0.8rem;
+    padding-bottom:1rem;
+ }
+
+.step1_info .step1_heading{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+
+.step1_info .step1_heading img{
+    width: 2.5rem;
+}
+
+.step1_container .step1_other_container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+}
+
+.step1_other_container div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.step1_container .step1_other_container img{
+    width:45%;
+}
+
+
+
+
+/* step 2 styling  */
+
+
+
+.step2_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.step2_container .step2_usdt_container{
+    background: transparent;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: solid 1px rgba(15, 125, 0, 0.399);
+    box-shadow: 0px 0px 10px 2px rgba(95, 255, 21, 0.224);
+
+    text-align: center;
+    padding: 0.5rem;padding-bottom: 3rem;
+    border-radius: 0.8rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.step2_usdt_container img{
+    width: 4rem;
+}
+.step2_usdt_container p{
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 0.8rem;
+
+}
+
+.step2_container .step2_info_contaner{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    text-align: start;
+    gap: 1rem;
+    font-size: 0.8rem;
+    font-weight: 200;
+    width:37%;
+    
+}
+
+.step2_info_contaner img{
+    width: 100%;
+}
+
+.step2_info_contaner .step2_heading{
+    font-size:1.6rem;
+    font-weight: 700;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.step2_info_contaner .step2_heading img{
+    width: 3rem;
+}
+
+
+
+
+
+/* step 3 style */
+
+.step3_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+.step3_info_contaner .step3_heading{
+    font-size:1.6rem;
+    font-weight: 700;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.step3_info_contaner .step3_heading img{
+    width: 3rem;
+}
+
+
+.step3_container .step3_info_contaner{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    text-align: start;
+    gap: 1rem;
+    font-size: 0.8rem;
+    font-weight: 200;
+    width:30%;
+}
+
+.step3_container .step3_dron_img img{
+    width: 28rem;
+}
+
+
+
+
+/* tab responsive */
+
+
+@media (max-width:1120px) {
+    .step2_container .step2_info_contaner{
+        width:42%;
+        
+    }
+    .step2_container .step2_usdt_container{
+        width: 42%;
+    }
+    .HowToBuySection_container .main_heading{
+        font-size: 1.7rem;
+        line-height: 1.3;
+    }
+}
+
+
+
+
+
+
+/* mobile responsive */
+
+
+@media (max-width:770px) {
+
+    /* step 1 style  */
+    
+    .HowToBuySection_container{
+        gap: 3rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .HowToBuySection_container .main_heading{
+        font-size: 1.7rem;
+        line-height: 1.3;
+    }
+
+    .BuyStep_container .step1_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   .step1_info_container{
+        width: 100%;
+        align-items: center;
+    }
+    
+    .step1_info {
+        max-width: 30rem;
+    }
+    
+    .step1_container .step1_other_container{
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .step1_container .step1_other_container img{
+        width: 7rem;
+    }
+    
+
+
+    /* step 2 style  */
+
+    
+    .step2_container{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    
+    .step2_container .step2_usdt_container{
+        width: 80%;
+        padding: 0.5rem;
+        padding-bottom: 2rem;
+    }
+    .step2_usdt_container img{
+        width: 4rem;
+    }
+    .step2_usdt_container p{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .step2_container .step2_info_contaner{
+        width:30rem;
+    }
+    
+    .step2_info_contaner img{
+        width:90%;
+        align-self: center;
+    }
+    
+    .step2_info_contaner .step2_heading img{
+        width: 3rem;
+    }
+
+
+    /* step 3 style */
+
+
+    .step3_container{
+    flex-direction: column;
+}
+
+.step3_container .step3_info_contaner{
+    width:30rem;
+}
+
+.step3_container .step3_dron_img img{
+    width: 20rem;
+}
+
+}
+
+
+
+
+
+
+
+
+@media (max-width:510px) {
+
+    /* step 1 style  */
+    
+    .step1_info {
+        max-width:100%;
+    }
+
+    .step1_container .step1_other_container{
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .step1_container .step1_other_container img{
+        width: 5rem;
+    }
+    
+
+
+    /* step 2 style  */
+    .step2_container{
+        width: 100%;
+    }
+    .step2_container .step2_usdt_container{
+        width: 90%;
+    }
+    
+    .step2_container .step2_info_contaner{
+        width:100%;
+    }
+    
+    .step2_info_contaner img{
+        width:90%;
+    }
+
+    /* step 3 style */
+
+    .step3_container .step3_info_contaner{
+        width:100%;
+    }
+}
+
+

@@ -1,0 +1,179 @@
+*{
+    font-family: "Inter", sans-serif;
+}
+
+.BuyCoin_Section_Container{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    z-index: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.BuyCoin_Section_Container h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+.BuyCoin_Section_Container p{
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+.payment_main_container{
+    box-shadow: 0px 2px 10px 0px rgba(95, 255, 21, 0.434);
+}
+
+
+.BuyCoin_Section_Container .Buycoin_info_container button{
+        background: transparent;
+        color: white;
+        font-weight: 700;
+        border: none;
+        border: solid 1px rgb(0, 183, 0);
+        border-radius:0.3rem;
+        width: fit-content;
+        padding: 0.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius:0.3rem;
+        text-align: center;
+        box-sizing: border-box;
+        &:hover{
+            cursor: pointer;
+            transition: all ;
+            transition-duration: 0.2s;
+            transform: scale(1.05);
+            background: rgba(51, 160, 0, 0.579);
+            background: linear-gradient(90deg,  rgba(51, 160, 0, 0.579) 0%,  rgba(129, 255, 71, 0.786) 46%, rgba(51, 160, 0, 0.579) 96%);
+        }     
+        &:active {
+            transition: all ;
+            transition-duration: 0.1s;
+            transform: scale(0.8); /* Scale down on click */
+          }   
+}
+
+.Buy_options_container .buy_option_imges{
+    width: 100%;
+    gap: 0.5rem;
+}
+
+
+
+
+
+/* tab responsive  */
+
+
+@media (max-width:1120px) {
+    
+    .BuyCoin_Section_Container .Buycoin_info_container h1{
+        font-size:1.7rem;
+    }
+
+    .BuyCoin_Section_Container .payment_main_container{
+        width: 55%;
+    }
+
+    .BuyCoin_Section_Container .payment_main_container section{
+        font-size: 0.8rem;
+    }
+
+    .BuyCoin_Section_Container .Buycoin_info_container button{
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+}
+
+/*  */
+
+
+@media (max-width:770px) {
+    .BuyCoin_Section_Container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .BuyCoin_Section_Container .Buycoin_info_container{
+        width:75%;
+    }
+    
+    .BuyCoin_Section_Container .Buycoin_info_container h1{
+        text-align: center;
+    }
+
+    .BuyCoin_Section_Container .Buycoin_info_container p{
+       text-align: center;
+    }
+
+    .BuyCoin_Section_Container .Buycoin_info_container .buttons{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .BuyCoin_Section_Container .payment_main_container{
+        width: 75%;
+    }
+}
+
+
+
+
+
+
+
+/*  moble responsive */
+
+@media (max-width:516px) {
+    .BuyCoin_Section_Container{
+        flex-direction: column;
+    }
+    .BuyCoin_Section_Container .Buycoin_info_container{
+        width:fit-content;
+    }
+    
+    .BuyCoin_Section_Container .Buycoin_info_container h1{
+        text-align: center;
+        font-size:1.7rem;
+        line-height: 1.3;
+    }
+
+    .BuyCoin_Section_Container .Buycoin_info_container p{
+       text-align: center;
+    }
+
+    .BuyCoin_Section_Container .Buycoin_info_container .buttons{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .BuyCoin_Section_Container .payment_main_container{
+        width:100%;
+    }
+
+    .BuyCoin_Section_Container .payment_main_container p{
+        font-size: 0.8rem;
+    }
+    .BuyCoin_Section_Container .payment_main_container section{
+        font-size: 0.8rem;
+    }
+
+    .Buy_options_container .buy_option_imges{
+        width: 100%;
+        gap: 0.5rem;
+    }
+}
+
+
+@media (max-width:400px) {
+    .BuyCoin_Section_Container  .buy_coin_main_container{
+        font-size:0.8rem;
+       }
+    .BuyCoin_Section_Container .payment_main_container section{
+        font-size: 0.6rem;
+    }
+
+    .BuyCoin_Section_Container .buy_coin_main_container img{
+        width: 1.7rem;
+    }
+}

@@ -1,0 +1,161 @@
+.BuyNowPage_container {
+    color: white;
+    margin: 0;
+    padding: 0.5rem;
+    /* padding-bottom: 10rem; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+
+    background-color: black;
+    /* background-image: url(../../Assets/Images/colorDot_bg.png); */
+    /* background-size:contain; */
+    /* background-repeat: repeat; */
+}
+
+
+p{
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+  }
+  
+  h1{
+    font-family: "Irish Grover", system-ui;
+    font-style: normal;
+  }
+
+
+.nth-dot {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    background-color: rgba(145, 255, 36, 0.27);
+    box-shadow: 0 0 150px 130px rgba(145, 255, 36,  0.27);
+    z-index: -1;
+    animation-name: dot_move_3;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+
+.BuyNowPage_container::before,
+.BuyNowPage_container::after {
+    content: "";
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    background-color: rgba(0, 151, 0, 0.27);
+    box-shadow: 0 0 200px 120px rgba(0, 151, 0, 0.27);
+    z-index: -1;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.BuyNowPage_container::before {
+    animation-name: dot_move;
+    animation-duration: 25s; 
+}
+
+.BuyNowPage_container::after {
+    animation-name: dot_move_2;
+    animation-duration: 25s; 
+}
+
+
+@media (max-width:516px) {
+    .BuyNowPage_container::before,
+.BuyNowPage_container::after {
+    box-shadow: 0 0 80px 80px rgba(0, 151, 0, 0.27);
+}
+
+.nth-dot {
+    box-shadow: 0 0 60px 60px rgba(145, 255, 36,  0.27);
+}
+}
+
+
+@keyframes dot_move {
+    0% {
+        left: 5%;
+        top: 5%;
+    }
+    25% {
+        left: 80%;
+        top: 10%;
+    }
+    50% {
+        left: 30%;
+        top: 50%;
+    }
+    75% {
+        left: 85%;
+        top: 75%;
+    }
+    100% {
+        left: 10%;
+        top: 90%;
+    }
+}
+
+@keyframes dot_move_2 {
+    0% {
+        left: 10%;
+        top: 15%;
+    }
+    20% {
+        left: 70%;
+        top: 25%;
+    }
+    40% {
+        left: 40%;
+        top: 60%;
+    }
+    60% {
+        left: 80%;
+        top: 70%;
+    }
+    80% {
+        left: 20%;
+        top: 40%;
+    }
+    100% {
+        left: 90%;
+        top: 85%;
+    }
+}
+
+@keyframes dot_move_3 {
+    0% {
+        left: 20%;
+        top: 10%;
+    }
+    25% {
+        left: 90%;
+        top: 20%;
+    }
+    50% {
+        left: 50%;
+        top: 70%;
+    }
+    75% {
+        left: 70%;
+        top: 85%;
+    }
+    100% {
+        left: 30%;
+        top: 95%;
+    }
+}
+
+
+
+
