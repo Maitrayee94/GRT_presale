@@ -28,6 +28,32 @@ export default function BuyToken() {
   const contract = new ethers.Contract(PRESALE_CONTRACT_ADDRESS, PRESALE_CONTRACT_ABI, signer);
   const tokenContract = new ethers.Contract(GRT_TOKEN_CONTRACT_ADDRESS, GRT_TOKEN_CONTRACT_ABI, signer);
 
+  const [balance, setBalance] = useState(0);
+  const [remainingToken, setRemainingToken] = useState(0);
+  const [toknsold, setTokenSold] = useState(0);
+
+  useEffect(() => {
+    const getData = async () => {
+      
+      try {
+        const usdbalance = await provider.getBalance(PRESALE_CONTRACT_ADDRESS);
+        console.log("inside try block");
+        setBalance(ethers.utils.formatEther(usdbalance));
+        console.log("USD Balance:", ethers.utils.formatEther(usdbalance));
+        
+        const remainingtoken = await contract.remainingTokens();
+        const rt = 2_000_000_000 - ethers.utils.formatUnits(remainingtoken, 18);
+        setRemainingToken(ethers.utils.formatUnits(remainingtoken, 18));
+        console.log(ethers.utils.formatUnits(remainingtoken, 18));
+        setTokenSold(rt);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    
+    getData();
+  }, [contract]);
+
   useEffect(() => {
     const handleApprovalAndStaking = async () => {
       if (!account || !usdtAmount) return;
@@ -119,11 +145,11 @@ export default function BuyToken() {
             <div className="flex w-full">
               <section className="w-2/4 text-center">
                 <span className="text-slate-400">Total Coin Sales USD</span>{" "}
-                <br /> $19,917,343.53
+                <br /> {balance}
               </section>
               <section className="w-2/4 text-center border-l border-slate-600">
                 <span className="text-slate-400">Total Coin Sold</span> <br />{" "}
-                $8,080,400,144
+                {toknsold}
               </section>
             </div>
 
@@ -136,7 +162,7 @@ export default function BuyToken() {
                 }}
               >
                 <div className="absolute top-0 left-0 h-full w-fit pl-2 text-xs flex items-center">
-                  Remaining 16.3M
+                  Remaining {remainingToken}
                 </div>
                 <img
                   src={progress_dot}
@@ -150,7 +176,7 @@ export default function BuyToken() {
           <div className="buy_coin_container flex flex-col items-center gap-3 p-4 w-full">
             <div className="flex w-full">
               <section className="w-2/4 text-center">
-                0.0045 USDT = 1 GRT
+                1 USDT = 1 GRT
               </section>
               <section className="w-2/4 text-center">
                 Next Batch: 0.005

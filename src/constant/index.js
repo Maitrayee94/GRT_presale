@@ -1,5 +1,5 @@
-export const PRESALE_CONTRACT_ADDRESS= "0xEeee34aCFA28E110563f39357412abA105B1A4f3"
-export const GRT_TOKEN_CONTRACT_ADDRESS= "0x70f4f6d6C91418FB6A182B315Ee8074A53088233";
+export const PRESALE_CONTRACT_ADDRESS= "0xc46460dF0F46334bFf2754eB9cfa31ca9511878e"
+export const GRT_TOKEN_CONTRACT_ADDRESS= "0xb40CAb21eFc931145F4Ea0358d9137d24C215825";
 export const GRT_TOKEN_CONTRACT_ABI= [
     {
         "inputs": [
@@ -590,6 +590,19 @@ export const PRESALE_CONTRACT_ABI= [
     {
         "inputs": [],
         "name": "rate",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "remainingTokens",
         "outputs": [
             {
                 "internalType": "uint256",
